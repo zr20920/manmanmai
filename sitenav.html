@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/shopNav.css">
+  <link rel="stylesheet" href="./css/font-awesome.min.css">
+</head>
+
+<body>
+  <header class="clearfix">
+    <a href="./index.html" class="font icon-angle-left"></a>
+    <h1>
+      商城导航
+    </h1>
+    <div class="app">
+      <a href=""><img src="./images/header_app.png" alt=""></a>
+    </div>
+  </header>
+  <main>
+    <ul>
+      <li><a href="javascript:;"></a></li>
+    </ul>
+  </main>
+</body>
+
+</html>
+<!--模板引擎-->
+<script src="./lib/zepto/zepto.js"></script>
+<script src="./lib/zepto/ajax.js"></script>
+<script src="./lib/zepto/event.js"></script>
+<script src="./lib/template-web.js"></script>
+
+<!--定义模版-->
+<script type="text/html" id="template">
+  {{each result}}
+  <li>
+    <a href="{{$value.navHref}}">
+      <div>
+        <img src="{{@$value.navImg}}" alt="">
+        <span>{{$value.navTitle}}</span>
+      </div>
+    </a>
+  </li>
+  {{/each}}
+</script>
+<script>
+  $.ajax({
+    url: "http://139.199.192.48:9090/api/getsitenav",
+    success: function (data) {
+      $("main>ul").html(template('template', data));
+    }
+  })
+
+</script>

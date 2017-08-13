@@ -1,0 +1,56 @@
+header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 25vw;
+  background-color: orange;
+}
+main {
+  padding: 2vw;
+  background-color: #ededed;
+}
+main > ul {
+  width: 100%;
+  border-radius: 2vw;
+  overflow: hidden;
+  background-color: #e3e3e3;
+  border: 1px solid #dbdbdb;
+}
+main > ul li {
+  border-bottom: 1px solid #dbdbdb;
+}
+main > ul li h3 {
+  line-height: 12.5vw;
+  height: 100%;
+  padding: 0 3.125vw;
+  font-size: 5vw;
+  background-color: #ededed;
+}
+main > ul li h3 span.fa {
+  float: right;
+  line-height: 12.5vw;
+  color: #dbdbdb;
+}
+main > ul li ul {
+  display: none;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  border-bottom: 2px solid #999;
+}
+main > ul li ul li {
+  float: left;
+  width: 33.33%;
+  font-size: 3.75vw;
+  text-align: center;
+  line-height: 12.5vw;
+  border-bottom: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+}
+main > ul li ul li:nth-child(3n) {
+  border-right: none;
+}
+footer {
+  width: 100%;
+  height: 12.5vw;
+  background-color: orange;
+}

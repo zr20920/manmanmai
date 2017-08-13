@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no'>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>比较搜索分类</title>
+    <link rel="stylesheet" href="lib/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/base_xzl.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body>
+    <!--头部-->
+    <header>
+        <!--顶部-->
+        <div class="xy_header">
+            <div class="header_logo">
+                <a href="javascript:void(0)">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+            </div>
+            <div class="header_app">
+                <a href="javascript:void(0)">
+                <img src="./images/header_app.png" alt="">
+            </a>
+            </div>
+        </div>
+        <!--搜索框-->
+        <div class="xy_searchBar">
+            <div class="search-inner">
+                <input type="search" name="" id="searchText" placeholder="请输入您想比价的商品">
+                <input type="button" name="" id="searchBtn" value="搜&nbsp;索">
+            </div>
+        </div>
+    </header>
+    <main class="section1">
+        <ul></ul>
+    </main>
+    <main class="section2">
+        <section class="topBar">
+            <a href="index.html">首页 ></a>
+            <a href="./search.html">全部分类 ></a>
+            <a href="#"></a>
+            <button>筛选</button>
+        </section>
+        <section class="content">
+            <ul></ul>
+        </section>
+        <section class="pageBar">
+            <button>上一页</button>
+            <select data-total="3"></select>
+            <button>下一页</button>
+        </section>
+    </main>
+    <main class="section3">
+        <section class="topBar">
+            <a href="index.html">首页 ></a>
+            <a href="javascript:;"></a>
+            <a href="#"></a>
+            <button>筛选</button>
+        </section>
+        <section class="content">
+        </section>
+        <section class="pageBar">
+            <button>查看更多评价</button>
+        </section>
+    </main>
+    <!--底部-->
+    <footer>
+        <div class="xy_footer">
+            <div class="footer_tools">
+                <a href="javascript:void(0)">登录</a>
+                <a href="javascript:void(0)">注册</a>
+                <a href="javascript:void(0)">返回顶部</a>
+            </div>
+            <div class="m_mmb">
+                <a href="javascript:void(0)">
+                <span>手机APP下载</span>
+                慢慢买手机版
+            </a>
+                <span>-- 掌上比价平台</span>
+                <p>m.manmanbuy.com</p>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
+<script type="text/html" id="template_bigTitle">
+    {{each result}}
+    <li>
+        <h3>{{$value.title}}<span class="fa fa-angle-right"></span></h3>
+        <ul data-titleid="{{$value.titleId}}" class="clearfix"></ul>
+    </li>
+    {{/each}}
+</script>
+<script type="text/html" id="template_smallTitle">
+    {{each result}}
+    <li><a href="javascript:;" data-categoryid="{{$value.categoryId}}">{{$value.category}}</a></li>
+    {{/each}}
+</script>
+
+<script type="text/html" id="template_list">
+    {{each result}}
+    <li data-productid="{{$value.productId}}">
+        <a href="javascript:;" data-productid="{{$value.productId}}">{{@$value.productImg}}</a>
+        <div class="cont">
+            <p>{{$value.productName}}</p>
+            <p class="price">{{$value.productPrice}}</p>
+            <div>
+                <span>{{$value.productQuote}}</span>
+                <span>{{$value.productCom}}</span>
+            </div>
+        </div>
+    </li>
+    {{/each }}
+</script>
+
+<script type="text/html" id="template_detail">
+    <div class="pro">
+        <div class="p_t">
+            <h3>{{@productName}}</h3>
+            {{@productImg}}
+            <span><a href="javascript:;">收藏</a></span>
+        </div>
+        {{@bjShop}}
+        <p>*实际价格以各网站列出的实时售价为准,我们提供的价格可能有数小时至数天的延迟</p>
+    </div>
+    <div class="comp">
+        <h3>网友评价</h3>
+        <div>
+            <ul>
+
+            </ul>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="template_comp">
+    {{each result}}
+    <li>
+        <div>
+            <span>{{$value.comName}}</span>
+            <div>
+                <p>{{$value.comTime}}</p>
+                <p>{{$value.comFrom}}</p>
+            </div>
+        </div>
+        <p>{{$value.comContent}}</p>
+    </li>
+    {{/each }}
+</script>
+
+<!--<script src="lib/jquery-1.8.2.min.js"></script>-->
+<script src="lib/zepto/zepto.js"></script>
+<script src="lib/zepto/fx.js"></script>
+<script src="lib/zepto/ajax.js"></script>
+<script src="lib/zepto/event.js"></script>
+<script src="lib/zepto/touch.js"></script>
+<script src="lib/template-web.js"></script>
+<script src="js/search.js"></script>

@@ -1,0 +1,242 @@
+@import 'media.css';
+@import 'normalize.css';
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  /* 盒子模型的 怪异模式  */
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+body {
+  background-color: #f7f7f7;
+  padding-bottom: 1.6rem;
+}
+.lowPrice_title {
+  height: .44rem;
+  width: 100%;
+  background-color: #f4483e;
+  line-height: .44rem;
+  padding: 0 .50rem 0 .30rem;
+  position: relative;
+  z-index: 2;
+}
+.lowPrice_title span {
+  position: absolute;
+  left: 0;
+  font-size: .22rem;
+  color: white;
+  width: .30rem;
+  padding-left: .18rem;
+}
+.lowPrice_title span > a {
+  font-size: .3rem;
+}
+.lowPrice_title p {
+  float: left;
+  font-size: .22rem;
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+.lowPrice_title .app {
+  position: absolute;
+  right: 0;
+  width: .50rem;
+  height: .44rem;
+  padding-right: .16rem;
+  padding-top: .08rem;
+}
+.lowPrice_title .app img {
+  width: .34rem;
+  height: .34rem;
+}
+.lowPrice_nav {
+  height: .39rem;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+  background-color: white;
+}
+.lowPrice_nav #wrapper {
+  width: 100%;
+}
+.lowPrice_nav #wrapper .nav_container {
+  padding-left: .13rem;
+  width: 228%;
+}
+.lowPrice_nav #wrapper .nav_container li {
+  float: left;
+  line-height: .37rem;
+  margin-right: .25rem;
+  font-size: .16rem;
+}
+.lowPrice_nav #wrapper .nav_container .active {
+  color: #e4393c;
+  border-bottom: 2px solid #e4393c;
+}
+.lowPrice_product {
+  margin-top: .06rem;
+  height: 90%;
+}
+.lowPrice_product #P_wrapper {
+  height: 100%;
+}
+.lowPrice_product #P_wrapper .product_container {
+  width: 100%;
+}
+.lowPrice_product #P_wrapper .product_container li {
+  background-color: #fff;
+  width: 100%;
+  margin: .06rem 0;
+  padding-left: 1.4rem;
+  position: relative;
+  height: 1.5rem;
+}
+.lowPrice_product #P_wrapper .product_container li .product_pic {
+  position: absolute;
+  left: .05rem;
+  top: .1rem;
+  width: 1.35rem;
+  height: 1.30rem;
+}
+.lowPrice_product #P_wrapper .product_container li .product_pic img {
+  width: 1.30rem;
+  height: 1.30rem;
+}
+.lowPrice_product #P_wrapper .product_container li .product_info {
+  width: 100%;
+}
+.lowPrice_product #P_wrapper .product_container li .product_info .info_top {
+  position: absolute;
+  left: 1.4rem;
+  top: .1rem;
+  padding-right: .10rem;
+}
+.lowPrice_product #P_wrapper .product_container li .product_info .info_top .t {
+  box-sizing: content-box;
+  padding-bottom: .1rem;
+  line-height: .22rem;
+  font-size: .16rem;
+  color: black;
+}
+.lowPrice_product #P_wrapper .product_container li .product_info .info_top .pr {
+  color: #ed1c24;
+  font-size: .2rem;
+}
+.lowPrice_product #P_wrapper .product_container li .product_info .info_top .pr i {
+  font-size: .16rem;
+  margin-right: .03rem;
+}
+.lowPrice_product #P_wrapper .product_container li .product_info .info_top .pr em {
+  font-size: .12rem;
+  margin-right: .02rem;
+}
+.lowPrice_product #P_wrapper .product_container li .product_info .info_top .pr del {
+  font-size: .16rem;
+  color: #ccc;
+  margin-left: .13rem;
+}
+.lowPrice_product #P_wrapper .product_container li .product_info .info_bottom {
+  width: 58%;
+  position: absolute;
+  left: 1.4rem;
+  bottom: .1rem;
+  font-size: .14rem;
+}
+.lowPrice_product #P_wrapper .product_container li .product_info .info_bottom .bar i {
+  float: left;
+  width: .84rem;
+  text-align: center;
+  height: .14rem;
+  border: 1px solid #ed1c24;
+  border-radius: .15rem;
+  background-color: #ffb7b7;
+  color: white;
+  line-height: 1;
+  font-size: .12rem;
+  margin-right: .11rem;
+}
+.lowPrice_product #P_wrapper .product_container li .product_info .info_bottom .b {
+  width: 100%;
+  margin-top: .1rem;
+}
+.lowPrice_product #P_wrapper .product_container li .product_info .info_bottom .b .get {
+  float: left;
+  border: 1px dotted #ed1c24;
+  color: #ed1c24;
+  text-align: center;
+  line-height: .2rem;
+  padding: .02rem .05rem;
+}
+.lowPrice_product #P_wrapper .product_container li .product_info .info_bottom .b .buy {
+  float: right;
+  width: .62rem;
+  height: .28rem;
+  line-height: .28rem;
+  text-align: center;
+  background-color: #ff5e5d;
+  border-radius: .05rem;
+  color: white;
+}
+.lowPrice_bottom {
+  height: 1.24rem;
+  background-color: #efefef;
+  padding-top: .3rem;
+  font-size: .14rem;
+}
+.lowPrice_bottom .bottom_tools {
+  height: .32rem;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  font-size: .16rem;
+  line-height: .32rem;
+}
+.lowPrice_bottom .bottom_tools li {
+  padding: 0 .37rem 0 .37rem;
+  float: left;
+}
+.lowPrice_bottom .bottom_tools li:nth-child(1),
+.lowPrice_bottom .bottom_tools li:nth-child(2) {
+  border-right: 1px solid #c4c4c4;
+}
+.lowPrice_bottom .bottom_info {
+  padding-top: .16rem;
+  color: #666;
+  text-align: center;
+}
+.lowPrice_bottom .bottom_info a {
+  display: inline-block;
+  color: #ed1c24;
+}
+.lowPrice_bottom .bottom_info span {
+  color: black;
+}

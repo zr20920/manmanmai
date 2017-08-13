@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>海淘折扣</title>
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css" >
+    <link rel="stylesheet" type="" href="./css/haitao.css">
+   
+</head>
+
+<body>
+    <div class="ht_view">
+        <!-- 海淘折扣  头部区域 -->
+        <header>
+            <div class="ht_back">
+                <a href="javascript:;" class="icon-chevron-left">
+                    </a>
+            </div>
+            <h1>海淘折扣</h1>
+            <div class="ht_home"><a href="javascript:;">下载</a></div>
+        </header>
+        <!-- 海淘折扣  主体部分 -->
+        <main>
+            <div class="ht_product ">
+                <ul class="clearfix" id="cccccc">
+                    <!-- 模版部分 -->
+
+                </ul>
+            </div>
+            <div class="ht_dispage clearfix">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><a href="javascript:;" style='height:.32rem;border:.01rem solid #bababa; border-radius: .05rem;text-align: center;line-height:.32rem;background-color:#dedede;left: 0;'>上一页</a></td>
+                            <td>
+                                <a href="javascript:; " style=' text-align: center'>
+                                    <select name="" id="" style='border:.01rem solid #bababa; font-size:.16rem; height:.32rem;' >
+                                        <option value="">1/2017</option>
+                                        <option value="">2/2017</option>
+                                        <option value="">3/2017</option>
+                                        <option value="">4/2017</option>
+                                    </select>
+                                </a>
+                            </td>
+                            <td><a href="javascript:;" style='height:.32rem;border-radius: .05rem;border:.01rem solid #bababa;text-align: center;line-height:.32rem;background-color:#dedede;;left: 0;'>下一页</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <!-- 海淘折扣  底部区域 -->
+        <footer>
+            <div class="f_up">
+                <a href="javascript:;">登录</a>
+                <a href="javascript:;">注册</a>
+                <a href="javascript:;" ><span class="icon-circle-arrow-up"></span>回到顶部</a>
+            </div>
+            <div class="f_down">
+                <p>
+                    <a href="javascript:;">手机App下载</a>
+                    <a href="javascript:;">慢慢买手机版</a>--xx
+                </p>
+                <p>xxxxxx</p>
+            </div>
+        </footer>
+
+    </div>
+    <script src=""></script>
+    <script src="./lib/jquery-1.8.2.min.js"></script>
+    <script src="./lib/template-web.js"></script>
+    <script type="text/html" id="template">
+        {{each result}}
+        <li>
+            <a href="javascript:;" class="clearfix">
+                <div class="ht_pic">
+                    {{@$value.productImgSm}}
+                </div>
+                <div class="ht_info">
+                    <div class="ht_title">{{$value.productName}}<span>{{$value.productPinkage}}</span></div>
+                    <div class="ht_other">
+                        <span>{{$value.productFrom}} | {{$value.productTime}}</span><span>{{$value.productComCount}}</span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script>
+        $(function () {
+            /* 1声明变量page=1; page++ 点击上下保存数据 传入data */
+
+            var pageId = 1;
+            $.ajax({
+                url: 'http://139.199.192.48:9090/api/getmoneyctrl',
+                data: {
+                    pageid: 1
+                },
+                success: function (res) {
+                    // console.log(res)
+                    var temp = template("template", res);
+                    $('#cccccc').html(temp);
+                }
+                /* 点击事件pagesize = 总页码
+                    pagenum = pageid ++  $.val()
+                 */
+
+
+            })
+
+
+
+            /* 回到顶部  动画过渡效果*/
+            //两种jS选择器都可以
+            // $('.f_up>a').eq(2).click(function(){
+            $('.f_up>a:eq(2)').click(function () {
+                // console.log('点到我了!');
+                //蜷曲的部分--目标位置
+                // $('body').scrollTop(0);
+                $("body").animate({
+                    scrollTop:'0'
+                }, 1000);
+
+            })
+
+
+
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 25vw;
+  background-color: orange;
+}
+main {
+  margin: 0vw auto;
+  width: 100%;
+  position: relative;
+}
+main .topBar {
+  height: 12.5vw;
+  padding: 0 2vw;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-top: 2px solid #aaa;
+}
+main .topBar a {
+  height: 100%;
+  line-height: 12.5vw;
+  float: left;
+  margin-right: 1vw;
+}
+main .topBar button {
+  position: absolute;
+  right: 2vw;
+  background: linear-gradient(to top, #fff 0%, #ccc 100%);
+  border: 1px solid #dbdbdb;
+  padding: 0 4vw;
+  margin: 1.25vw 0;
+  height: 10vw;
+  border-radius: 2vw;
+}
+main .content ul li {
+  height: 30vw;
+  border-bottom: 1px solid #dbdbdb;
+}
+main .content ul li > div {
+  width: 100%;
+  margin: 0 auto;
+}
+main .content ul li a {
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+main .content ul li a img {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+}
+main .content ul li .cont {
+  padding: 2.5vw 0;
+  height: 100%;
+}
+main .content ul li .cont p {
+  line-height: 6vw;
+  max-height: 12vw;
+  overflow: hidden;
+  padding: 0 2vw;
+}
+main .content ul li .cont .price {
+  color: red;
+}
+main .content ul li .cont span {
+  font-size: 3.75vw;
+  color: #ccc;
+  padding: 0 2vw;
+}
+main .pageBar {
+  height: 12.5vw;
+  padding: 2vw 30vw;
+  position: relative;
+}
+main .pageBar select {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  width: 60%;
+  font-size: 5vw;
+}
+main .pageBar button {
+  position: absolute;
+  top: 0;
+  background: linear-gradient(to top, #eee 0%, #ccc 100%);
+  box-shadow: 0 1px 1px 0 #ccc;
+  border: 1px solid #dbdbdb;
+  padding: 0 4vw;
+  margin: 1.5vw 0;
+  height: 70%;
+  border-radius: 2vw;
+}
+main .pageBar button:nth-of-type(1) {
+  left: 4vw;
+}
+main .pageBar button:nth-of-type(2) {
+  right: 4vw;
+}
+footer {
+  width: 100%;
+  height: 12.5vw;
+  background-color: orange;
+}

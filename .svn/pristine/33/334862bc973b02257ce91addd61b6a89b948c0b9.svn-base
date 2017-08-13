@@ -1,0 +1,141 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  /* 盒子模型的 怪异模式  */
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.view {
+  width: 100%;
+  height: 100%;
+}
+a.disabled {
+  cursor: not-allowed;
+}
+header {
+  width: 100%;
+  height: .44rem;
+  background-color: #ff841d;
+  padding: 0 .09rem;
+  color: #fff;
+}
+header .font {
+  float: left;
+  width: .5rem;
+  font-size: .4rem;
+  margin-left: .1rem;
+}
+header h1 {
+  float: left;
+  font-size: .2rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: .44rem;
+  margin-left: .3rem;
+}
+header .app {
+  float: right;
+}
+header .app > a img {
+  width: .34rem;
+  height: .34rem;
+  margin-top: .06rem;
+}
+.list {
+  width: 100%;
+  padding: .14rem .08rem 0rem .08rem;
+}
+.list .item {
+  height: 1.15rem;
+}
+.list .item .pic {
+  float: left;
+  width: 1.1rem;
+}
+.list .item .pic img {
+  width: 1rem;
+  height: 1rem;
+}
+.list .item .info {
+  padding-left: .9rem;
+  font-size: .14rem;
+}
+.list .item .info .title {
+  font-size: .15rem;
+}
+.list .item .info .title span {
+  color: #ff6c00;
+}
+.list .item .info .other {
+  margin-top: .2rem;
+  color: #a1a1a1;
+  font-size: .12rem;
+}
+.list .item .info .other span:last-child {
+  float: right;
+}
+.page {
+  height: .9rem;
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: .2rem .2rem;
+  position: relative;
+  text-align: center;
+}
+.page a {
+  width: .83rem;
+  height: .35rem;
+  border-radius: 5px;
+  background-color: #e2e2e2;
+  font-size: .14rem;
+  text-align: center;
+  line-height: .35rem;
+  border: 1px solid #ccc;
+}
+.page .pre {
+  position: absolute;
+  top: .3rem;
+}
+.page #middle {
+  width: .95rem;
+  height: .35rem;
+  position: absolute;
+  top: .3rem;
+  left: 1.4rem;
+  text-align: center;
+  font-size: .14rem;
+}
+.page .next {
+  position: absolute;
+  right: .2rem;
+  top: .3rem;
+}

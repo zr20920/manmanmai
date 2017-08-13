@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" type="" href="./css/skiphop.css">
+
+
+</head>
+
+<body>
+    <div class="mmb_view">
+        <!-- 头 -->
+        <div class="mmb_header">
+            <a href="javascript:void(0);" class="header_l"></a>
+            <div class="header_tip">凑单品</div>
+            <a href="javascript:void(0);" class="header_r"></a>
+        </div>
+        <!-- 搜索栏 -->
+        <div class="mmb_search">
+            <div class="search_l"></div>
+            <div class="search_r"></div>
+        </div>
+
+    </div>
+
+
+
+    <script src="./js/skiphop.js"></script>
+    <script>
+    </script>
+</body>
+
+</html>

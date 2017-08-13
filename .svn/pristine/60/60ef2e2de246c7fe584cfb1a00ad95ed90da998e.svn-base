@@ -1,0 +1,10 @@
+<!-- 头部 -->
+<header class="clearfix">
+    <a href=""><img src="./images/header_logo.png" alt=""></a>
+    <a href=""><img src="./images/header_app.png" alt=""></a>
+</header>
+<!-- 搜索 -->
+<div class="search">
+    <input type="search" name="search" value="" placeholder="请输入你想比价的商品">
+    <input type="buttom" value="搜索">
+</div>

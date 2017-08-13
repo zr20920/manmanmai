@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/localPrice.css">
+</head>
+
+<body>
+  <div class="header"></div>
+
+  <!--内容区域-->
+  <div class="content">
+    <ul></ul>
+  </div>
+</body>
+
+</html>
+
+<!--模板引擎-->
+<script src="./lib/zepto/zepto.js"></script>
+<script src="./lib/zepto/ajax.js"></script>
+<script src="./lib/zepto/event.js"></script>
+<script src="./lib/template-web.js"></script>
+
+<!--定义模版-->
+<script type="text/html" id="template">
+  {{each result}}
+  <li>
+    <a href="./localPriceInfo.html?id={{$value.productId}}">
+      <div class="pic">{{@$value.productImg}}</div>
+      <div class="name">{{$value.productName}}</div>
+      <div class="price">{{$value.productPrice}}</div>
+      <div class="info">
+        <span class="from">{{$value.productFrom}}</span>
+        <span class="time">{{$value.productTime}}</span>
+      </div>
+    </a>
+  </li>
+  {{/each}}
+</script>
+<script>
+  $.ajax({
+    url: "http://139.199.192.48:9090/api/getinlanddiscount",
+    success: function (data) {
+      $(".content>ul").html(template('template', data));
+    }
+  })
+
+</script>

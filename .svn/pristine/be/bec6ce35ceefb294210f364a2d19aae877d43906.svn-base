@@ -1,0 +1,128 @@
+header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 25vw;
+    background-color: orange;
+}
+main{
+    margin: 0vw auto;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    .topBar{
+        height: 12.5vw;
+        padding: 0 2vw;
+        background: linear-gradient(to bottom, #fff 0% , #eee 100%);
+        border-top: 2px solid #aaa;
+        a{
+            height: 100%;
+            line-height: 12.5vw;
+            float: left;
+            margin-right: 1vw; 
+        }
+        button{
+            position: absolute;
+            right: 2vw;
+            background: linear-gradient(to top, #fff 0% , #ccc 100%);
+            // box-shadow: 0 1px 1px 0 #ccc;
+            border: 1px solid rgb(219, 219, 219);
+            padding: 0 4vw;
+            margin: 1.25vw 0;
+            height: 10vw;
+            border-radius: 2vw;
+        }
+
+    }
+    .content{
+        .pro{
+            .p_t{
+                position: relative;
+                h3{
+                    text-align: center;
+                    margin-top: 5vw;
+                }
+                img{
+                    width: 50%;
+                    height: 50%;
+                    margin: 0 auto;
+                }
+                span{
+                    position: absolute;
+                    bottom: 5vw;
+                    right: 10vw;
+                    padding: 2vw 0.8vw;
+                    font-size: 3.75vw;
+                    color: #fff;
+                    border-radius: 50%;
+                    background-color: rgb(139, 201, 0);
+                }
+            }
+            table{
+                border-bottom: 1px solid rgb(219, 219, 219);
+                // border-top: 1px solid rgb(219, 219, 219);
+                img{
+                    width: 50%;
+                    height: 50%;
+                    margin: 2vw auto;
+                }
+            }
+            >p{
+                padding: 3vw;
+            }
+        }
+        .comp{
+            h3{
+                background: linear-gradient(to top, #eef 0% , #ddd 100%);
+                text-align: center;
+                height: 12.5vw;
+                line-height: 12.5vw;
+            }
+            >div{
+                ul{
+                    li{
+                        >div{
+                            color: rgb(193, 193, 193);
+                            font-size: 3.75vw;
+                            overflow: hidden;
+                            padding: 3vw;
+                            span{
+                                float: left;
+                            }
+                            >div{
+                                float: right;
+                                p{
+                                    text-align: right;
+                                }
+                            }
+                        }
+                        >p{
+                            padding: 0 3vw 3vw;
+                            border-bottom: 1px solid rgb(219, 219, 219);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .pageBar{
+        height: 20vw;
+        button{
+            background: linear-gradient(to top, #eee 0% , #ccc 100%);
+            box-shadow: 0 1px 1px 0 #ccc;
+            border: 1px solid rgb(219, 219, 219);
+            margin: 4vw 10%;
+            font-size: 5vw;
+            height: 50%;
+            width: 80%;
+            border-radius: 2vw;
+        }
+    }
+}
+footer{
+    // position: fixed;
+    // bottom: 0;
+    width: 100%;
+    height: 12.5vw;
+    background-color: orange;
+}

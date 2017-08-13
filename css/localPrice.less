@@ -1,0 +1,66 @@
+@import './base.css';
+@import './media.css';
+//头部区域
+header {
+    width: 100%;
+    height: .44rem;
+    background-color: #ff841d;
+    padding: 0 .09rem;
+    color: #fff;
+    .font {
+        float: left;
+        width: .5rem;
+        font-size: .4rem;
+        margin-left: .1rem;
+    }
+    h1 {
+        float: left;
+        font-size: .2rem;
+        font-weight: bold;
+        text-align: center;
+        line-height: .44rem;
+        margin-left: .75rem;
+    }
+    .app {
+        float: right;
+        >a {
+            img {
+                width: .34rem;
+                height: .34rem;
+                margin-top: .06rem;
+            }
+        }
+    }
+}
+
+//内容区域
+.content {
+    font-size: .12rem;
+    li {
+        width: 50%;
+        height: 2.5rem;
+        padding: .2rem;
+        float: left;
+        border-right: 1px solid #f4f4f4;
+        border-bottom: 1px solid #f4f4f4;
+        .pic {}
+        .name {
+            // height: .24rem;
+            margin-top: .2rem;
+            font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        .price {
+            color: #ff9547;
+        }
+        .info {
+            font-size: .12rem;
+            color: #b7b7b7;
+        }
+    }
+}
+

@@ -1,0 +1,67 @@
+@import 'base.css';
+@import 'media.css';
+header {
+  width: 100%;
+  height: .44rem;
+  background-color: #ff841d;
+  padding: 0 .09rem;
+  color: #fff;
+}
+header .font {
+  float: left;
+  width: .5rem;
+  font-size: .4rem;
+  margin-left: .1rem;
+}
+header h1 {
+  float: left;
+  font-size: .2rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: .44rem;
+  margin-left: .75rem;
+}
+header .app {
+  float: right;
+}
+header .app > a img {
+  width: .34rem;
+  height: .34rem;
+  margin-top: .06rem;
+}
+.pic {
+  width: 60%;
+  margin: 0 auto;
+}
+.container {
+  padding: .12rem;
+  font-size: .12rem;
+}
+.container p {
+  margin-top: .1rem;
+}
+.container .title {
+  font-weight: 600;
+  font-size: .16rem;
+}
+.container .price {
+  color: #ff7222;
+}
+.container .content {
+  color: #acacac;
+}
+.container .comment .tit {
+  margin-top: .1rem;
+  font-size: .14rem;
+  font-weight: 500;
+}
+.container .comment #ctl00_ContentBody_txt_nr {
+  width: 100%;
+}
+.container .comment #ctl00_ContentBody_Button1 {
+  width: .8rem;
+  height: .3rem;
+  background: #ff841d;
+  float: right;
+  color: #fff;
+}

@@ -1,0 +1,51 @@
+@import './base.css';
+@import './media.css';
+header {
+    height: .4rem;
+    background: #ff841d;
+}
+
+.pic {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.container {
+    padding: .12rem;
+    font-size: .12rem;
+    p{
+      margin-top: .1rem;
+    }
+    .title {
+        font-weight: 600;
+        font-size: .16rem;
+    }
+    .price {
+        color: #ff7222;
+    }
+    .content {
+        color: #acacac;
+        .from {}
+        .time {}
+        .tips {}
+    }
+    .info {}
+    .comment{
+      .tit {
+        margin-top: .1rem;
+        font-size: .14rem;
+        font-weight: 500;
+      }
+      #ctl00_ContentBody_txt_nr{
+        width: 100%;
+      }
+      #ctl00_ContentBody_Button1{
+        width: .8rem;
+        height: .3rem;
+        background: #ff841d;
+        float: right;
+        color: #fff;
+
+      }
+    }
+}

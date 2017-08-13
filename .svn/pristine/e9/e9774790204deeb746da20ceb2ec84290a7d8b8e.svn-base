@@ -1,0 +1,151 @@
+@import './base.less';
+
+/*头部*/
+
+
+.coupon_head {
+    width: 100%;
+    height: .44rem;
+    background-color: #f4483e;
+    padding: 0 .14rem;
+    .back {
+        width: .5rem;
+        height: 100%;
+        margin-left: .05rem;
+        float: left;
+        #arrow_left {
+            font-size: .4rem;
+            font-weight: normal;
+            float: left;
+            margin-top: .03rem;
+            color: #fff;  
+        }
+    }
+    >h1 {
+        float: left;
+        font-size: .2rem;
+        font-weight: bold;
+        color: #fff;
+        line-height: .44rem;
+        text-align: center;
+        margin: 0 50px;
+        margin-left: .70rem;
+    }
+    .head_app {
+        float: right;
+        a {
+            >img {
+                width: .34rem;
+                height: .34rem;
+                margin-top: .06rem;
+            }
+        }
+    }
+}
+
+/*优惠券列表*/
+.coupon_tips {
+    width: 100%;
+    color: #999;
+    font-size: .12rem;
+    text-align: center;
+    margin: .08rem 0;
+}
+.cover {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+     .close {
+        //  width: .rem;
+        //  height: .3rem; 
+         font-size: .25rem;
+         opacity: .6;
+         color:#fff;
+         position:absolute;
+         top:.02rem;
+         right:.02rem; 
+     }
+     .prev{
+        font-size:.4rem;
+        opacity: .4;
+        position: absolute;
+        color:#fff;
+        top:2.8rem;
+        left: .5rem;
+     }
+      .next{
+        font-size:.4rem;
+        opacity: .8;
+        position: absolute;
+        color:#fff;
+        top:2.8rem;
+        right: .5rem;
+     }
+    img {
+        width: 60%;
+        margin: 2rem auto; // transform: translate(50%,50%)
+    }
+     } 
+    
+
+
+/*左边图片*/
+
+.coupon_list {
+    .cou_list_content {
+        position: relative;
+        width: 100%;
+        padding: .1rem;
+    }
+    li {
+        border-bottom: 1px solid #e7e7e7;
+        height: 1.25rem;
+        margin-top: .1rem;
+        .list_pic {
+            >img {
+                width: 1.03rem;
+                height: .83rem;
+                float: left;
+                overflow: hidden;
+                margin-right: .1rem;
+            }
+        }
+        /*右边文字*/
+        .info {
+            .info_content {
+                width: .83rem;
+                height: 1.25rem;
+                position: relative;
+                float: left;
+                padding: 0 .1rem;
+                >h3 {
+                    width: 2.2rem;
+                    font-size: .13rem;
+                    font-weight: normal;
+                    color: #333333;
+                    word-break: break-all;
+                }
+                .price {
+                    font-size: .13rem;
+                    color: #5a5a5a;
+                    margin-bottom: .12rem;
+                }
+                .time {
+                    width: 1.2rem;
+                    font-size: .12rem;
+                    color: #ee7700;
+                }
+                .arrow_right {
+                    width: .1rem;
+                    font-size: .3rem;
+                    color: #a5a5a5;
+                    position: absolute;
+                    right: -1.6rem;
+                    top: .3rem;
+                }
+            }
+        }
+    }
+}

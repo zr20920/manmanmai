@@ -1,0 +1,188 @@
+/* 品牌列表 */
+
+@import './base.less';
+.view {
+    width: 100%;
+    perspective: 10rem;
+}
+
+
+/* 头部 */
+
+header {
+    width: 100%;
+    height: .5rem;
+    background-color: #ff841d;
+    padding: 0 .14rem;
+    >a {
+        float: left;
+        width: 50%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 50%;
+            margin-top: .125rem;
+        }
+    }
+    >a:last-child {
+        float: right;
+        width: .34rem;
+        height: .68rem;
+        img:last-child {
+            margin-top: .08rem;
+        }
+    }
+}
+
+
+/* 搜索 */
+
+.search {
+    width: 100%;
+    height: .52rem;
+    padding: 0 .4rem 0 .1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ebebeb;
+    >input {
+        width: 100%;
+        height: .3rem;
+        border-radius: .2rem;
+        padding-left: .22rem;
+        background-color: #f1f1f1;
+        font-size: .16rem;
+    }
+    >input:last-child {
+        padding-left: 0;
+        text-align: center;
+        font-size: .16rem;
+        color: #fff;
+        line-height: .3rem;
+        position: absolute;
+        right: 5px;
+        top: .1rem;
+        background-color: #ff841d;
+        width: .64rem;
+        height: .3rem;
+    }
+}
+
+
+/* 导航 */
+
+.nav {
+    height: .4rem;
+    width: 100%;
+    border-bottom: 1px solid #ebebeb;
+    background: linear-gradient(to top, #ececec, #fff);
+    ul {
+        a {
+            display: inline-block;
+        }
+        height: 100%;
+        line-height: .4rem;
+        padding-left: .08rem;
+        li {
+            height: 100%;
+            float: left;
+            font-size: .14rem;
+            color: #5a5a5a;
+        }
+    }
+}
+
+
+/* 列表 */
+
+.brand_list {
+    width: 100%;
+    position: relative;
+    .title {
+        width: 100%;
+        height: .4rem;
+        font-size: .16rem;
+        color: #874604;
+        padding-left: .08rem;
+        line-height: .4rem;
+        border-bottom: 1px solid #c8c8c8;
+        background-color: #f3f3f3;
+    }
+    >ul {
+        width: 100%;
+        position: absolute;
+        >div{
+            width:100%;
+            height: .6rem;
+            font-size: .16rem;
+            color: #888;
+            background-color: #f2f2f2;
+            border-bottom: 2px solid #888;
+            text-align: center;
+            line-height: .6rem;
+        }
+        li {
+            width: 100%;
+            height: .6rem;
+            border-bottom: 1px solid #e7e7e7;
+            background-color: #f2f2f2;
+            transform: rotateX(60deg);
+            animation: animate 2s forwards;
+            >a {
+                width: 100%;
+                height: 100%;
+                padding-left: .4rem;
+                padding-top: .12rem;
+                position: relative;
+                background: url("../images/arrow-right.svg") no-repeat right/.22rem .14rem;
+                span {
+                    display: block;
+                    width: .2rem;
+                    height: .2rem;
+                    background-color: #c9c9c9;
+                    position: absolute;
+                    left: .1rem;
+                    top: .12rem;
+                    font-size: .12rem;
+                    color: #fff;
+                    text-align: center;
+                    line-height: .2rem;
+                }
+                >div {
+                    h5 {
+                        font-size: .16rem;
+                        font-weight: normal;
+                    }
+                    p {
+                        font-size: .12rem;
+                        color: #9999b2;
+                    }
+                }
+            }
+        }
+        li:first-child {
+            span {
+                background-color: #f10e0e;
+            }
+        }
+        li:nth-child(2) {
+            span {
+                background-color: #ff9314;
+            }
+        }
+        li:nth-child(3) {
+            span {
+                background-color: #8adf5b;
+            }
+        }
+    }
+}
+
+@keyframes animate {
+    form {
+        transform: rotateX(45deg);
+    }
+    to {
+        transform: rotateX(0deg);
+    }
+}

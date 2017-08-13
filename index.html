@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/homePage.css">
+
+</head>
+
+<body>
+    <div class="xy_view">
+
+        <!--顶部-->
+        <div class="xy_header">
+            <div class="header_logo">
+                <a href="javascript:void(0)">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+            </div>
+            <div class="header_app">
+                <a href="javascript:void(0)">
+                <img src="./images/header_app.png" alt="">
+            </a>
+            </div>
+        </div>
+
+        <!--搜索框-->
+        <div class="xy_searchBar">
+            <div class="search-inner">
+                <input type="search" name="" id="searchText" placeholder="请输入您想比价的商品">
+                <input type="button" name="" id="searchBtn" value="搜&nbsp;索">
+            </div>
+        </div>
+
+        <!--导航栏-->
+        <div class="xy_navigationBar">
+            <ul class="item-List clearfix">
+                <!--<li>
+                    <a href="javascript:void(0)">
+                        <img src="./images/ic_search.png" alt="">
+                        <p>比价搜索</p>
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+
+        <!--超值折扣推荐-->
+        <div class="recommend_content">
+            <div class="recommend_nav">
+                <a href="moneyctrl.html">
+                    <p>超值折扣推荐</p>
+                    <span><img src="./images/more.png" alt=""></span>
+                </a>
+            </div>
+            <div class="recommend_discoun">
+                <ul class="discoun_list clearfix">
+                    <!--<li>
+                        <a href="javascript:void(0)">
+                            <img src="" alt="">
+                        </a>
+                        <a href="javascript:void(0)">
+                            移动端凑单品：海天 鲜味 生抽 1.28L
+                            <span>10.9元</span>
+                        </a>
+                        <div>
+                            <p>京东商城</p> <span>|</span>
+                            <p>10-25 14:10</p>
+                        </div>
+                        <span>有1人评论</span>
+                    </li>-->
+                </ul>
+            </div>
+            <!--更多优惠信息-->
+            <div class="more_discoun_info">
+                <a href="moneyctrl.html">更多优惠信息&nbsp;&nbsp;>></a>
+            </div>
+            <!--品牌排行-->
+            <div class="xy_brand">
+                <a href="./brandTitle.html">
+                    <p>品牌排行</p>
+                    <span><img src="./images/more.png" alt=""></span>
+                </a>
+            </div>
+        </div>
+
+        <!---->
+        <!--底部-->
+        <div class="xy_footer clearfix">
+            <div class="footer_tools">
+                <a href="javascript:void(0)">登录</a>
+                <a href="javascript:void(0)">注册</a>
+                <a href="javascript:void(0)">
+                    <img src="./images/top.jpg" alt="">
+                    <span>返回顶部</span>
+                </a>
+            </div>
+            <div class="m_mmb">
+                <a href="javascript:void(0)">
+                <span>手机APP下载</span>
+                慢慢买手机版
+            </a>
+                <span>-- 掌上比价平台</span>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./lib/jquery-1.8.2.min.js"></script>
+<script src="./lib/template-web.js"></script>
+<script src="./js/homePage.js"></script>
+
+<!--定义模板01-->
+
+<script type="text/html" id="template">
+    <li id='item{{indexmenuId}}'>
+        <a href="{{titlehref}}">
+            {{@img}}
+            <p>{{name}}</p>
+        </a>
+    </li>
+</script>
+
+<!--定义模板02-->
+
+<script type="text/html" id="template02">
+    <li id="{{productId}}">
+        <a href="./Savinginfor.html?id={{productId}}">
+            {{@productImgSm}}
+        </a>
+        <a href="javascript:void(0)">
+            {{productName}}
+            <span>{{productPinkage}}</span>
+        </a>
+        <div>
+            <p>{{productFrom}}</p> <span>|</span>
+            <p>{{productTime}}</p>
+        </div>
+        <span>{{productComCount}}</span>
+    </li>
+</script>

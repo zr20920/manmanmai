@@ -1,0 +1,263 @@
+@import "base.less";
+html,
+body {
+  height: 100%;
+}
+[contenteditable = "true"],
+input,
+textarea {
+  -webkit-user-select: auto !important;
+  -khtml-user-select: auto !important;
+  -moz-user-select: auto !important;
+  -ms-user-select: auto !important;
+  -o-user-select: auto !important;
+  user-select: auto !important;
+}
+.mmb_view {
+  height: 100%;
+  overflow: hidden;
+  padding-top: .44rem;
+  position: relative;
+  background-color: #f1f1f1;
+
+  /* 头 */
+  .mmb_header {
+    height: .44rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #ff841d;
+    padding: 0 .5rem;
+    > a {
+      position: absolute;
+      top: 0;
+      width: .5rem;
+      height: 100%;
+    }
+    .header_l {
+      left: 0;
+      > span {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        position: absolute;
+        color: #fff;
+        font-size: .4rem;
+      }
+    }
+    .header_r {
+      right: 0;
+      background-image: url("../images/header_app.png");
+      background-size: .34rem .34rem;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .header_tip {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      font-size: .2rem;
+      line-height: .44rem;
+      text-align: center;
+      color: #fff;
+    }
+  }
+
+  /* 搜索栏 */
+  .mmb_search {
+    width: 100%;
+    height: .38rem;
+    background-color: #ffffff;
+    position: relative;
+    padding-right: .45rem;
+    border-bottom: 1px solid #ccc;
+    .search_l {
+      width: 100%;
+      ul {
+        li {
+          float: left;
+          width: 33.3%;
+          font-size: .16rem;
+          line-height: .38rem;
+          text-align: center;
+          a {
+            div {
+              display: inline-block;
+            }
+            .icon-sort-down {
+              vertical-align: text-top;
+            }
+            .icon-sort-up {
+              vertical-align: text-bottom;
+            }
+          }
+        }
+      }
+    }
+    .search_r {
+      width: .45rem;
+      height: 100%;
+      border-left: 1px solid #ccc;
+      position: absolute;
+      right: 0;
+      top: 0;
+      a {
+        height: 100%;
+        span {
+          position: absolute;
+          font-size: .16rem;
+          line-height: .38rem;
+          color: #ccc;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+        }
+      }
+    }
+    /* 下拉栏 */
+    .mmb_dropDown {
+      position: absolute;
+      z-index: 99;
+      width: 100%;
+      background-color: #ffffff;
+      display: none;
+      border-top: 1px solid #ccc;
+      ul {
+        li {
+          border-bottom: 1px solid #ccc;
+          padding: 0 .1rem;
+          a {
+            font-size: .16rem;
+            padding: .05rem 0;
+            span {
+              height: 100%;
+              color: red;
+              float: right;
+              display: none;
+            }
+            span.active {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    /* 搜索 */
+    .searchDrop {
+      width: 100%;
+      position: absolute;
+      background-color: #f7f7f7;
+      z-index: 99;
+      display: none;
+      .searchBox {
+        padding: .1rem;
+        font-size: .18rem;
+        position: relative;
+        overflow: hidden;
+        input {
+          width: 60%;
+          height: .3rem;
+          padding-left: .3rem;
+          position: absolute;
+          z-index: -1;
+          margin-left: .25rem;
+          font-size: .14rem;
+          &::placeholder {
+            font-size: .14rem;
+          }
+        }
+        a {
+          float: right;
+          margin-right: .5rem;
+          margin-top: .03rem;
+        }
+        span {
+          position: absolute;
+          left: .42rem;
+          top: .15rem;
+        }
+      }
+      .searchSort,
+      .searchItem {
+        font-size: .14rem;
+        margin-top: .1rem;
+        border-bottom: 1px solid #ccc;
+        padding: 0 .1rem;
+        ul {
+          margin-top: .1rem;
+          li {
+            width: 25%;
+            text-align: center;
+            float: left;
+            padding: .05rem .1rem;
+            a {
+              padding: .05rem .1rem;
+              border: 1px solid #ccc;
+              border-radius: .05rem;
+            }
+            a.active {
+              background-color: #ff841d;
+              color: #fff;
+            }
+          }
+        }
+      }
+      .searchItem {
+        padding-bottom: .2rem;
+        border: none;
+      }
+    }
+  }
+
+  /* 商品 */
+  .mmb_goods {
+    touch-action: none;
+    height: 90%;
+    overflow: hidden;
+    ul {
+      width: 98%;
+      margin: 0 auto;
+      li {
+        float: left;
+        width: 50%;
+        a {
+          background-color: #fff;
+          height: 100%;
+          padding: 0 .05rem;
+          margin: .05rem;
+          .info {
+            font-size: .16rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding: .05rem 0;
+          }
+          .price {
+            font-size: .25rem;
+            padding-bottom: .05rem;
+            color: #f8601d;
+            .skiphop {
+              font-size: .16rem;
+              color: #fff;
+              border-radius: .05rem;
+              width: .7rem;
+              float: right;
+              background-color: #ff9501;
+              padding: .05rem .1rem;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* 加载图 */
+  .mmb_loading {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: .5rem;
+  }
+}

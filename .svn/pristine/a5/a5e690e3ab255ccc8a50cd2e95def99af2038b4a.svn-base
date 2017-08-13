@@ -1,0 +1,207 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  /* 盒子模型的 怪异模式  */
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+html,
+body {
+  height: 100%;
+}
+.mmb_view {
+  padding-top: .44rem;
+  position: relative;
+  background-color: #f1f1f1;
+  /* 头 */
+  /* 搜索栏 */
+  /* 商品 */
+  /* 加载图 */
+}
+.mmb_view .mmb_header {
+  height: .44rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background-color: #ff841d;
+  padding: 0 .5rem;
+}
+.mmb_view .mmb_header > a {
+  position: absolute;
+  top: 0;
+  width: .5rem;
+  height: 100%;
+}
+.mmb_view .mmb_header .header_l {
+  left: 0;
+}
+.mmb_view .mmb_header .header_l > span {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  color: #fff;
+  font-size: .4rem;
+}
+.mmb_view .mmb_header .header_r {
+  right: 0;
+  background-image: url("../images/header_app.png");
+  background-size: .34rem .34rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.mmb_view .mmb_header .header_tip {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: .2rem;
+  line-height: .44rem;
+  text-align: center;
+  color: #fff;
+}
+.mmb_view .mmb_search {
+  width: 100%;
+  height: .38rem;
+  background-color: #ffffff;
+  position: relative;
+  padding-right: .45rem;
+  border-bottom: 1px solid #ccc;
+  /* 下拉栏 */
+}
+.mmb_view .mmb_search .search_l {
+  width: 100%;
+}
+.mmb_view .mmb_search .search_l ul li {
+  float: left;
+  width: 33.3%;
+  font-size: .16rem;
+  line-height: .38rem;
+  text-align: center;
+}
+.mmb_view .mmb_search .search_l ul li a div {
+  display: inline-block;
+}
+.mmb_view .mmb_search .search_l ul li a .icon-sort-down {
+  vertical-align: text-top;
+}
+.mmb_view .mmb_search .search_l ul li a .icon-sort-up {
+  vertical-align: text-bottom;
+}
+.mmb_view .mmb_search .search_r {
+  width: .45rem;
+  height: 100%;
+  border-left: 1px solid #ccc;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.mmb_view .mmb_search .search_r a {
+  height: 100%;
+}
+.mmb_view .mmb_search .search_r a span {
+  position: absolute;
+  font-size: .16rem;
+  line-height: .38rem;
+  color: #ccc;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.mmb_view .mmb_search .mmb_dropDown {
+  position: absolute;
+  width: 100%;
+  background-color: #ffffff;
+  display: none;
+}
+.mmb_view .mmb_search .mmb_dropDown ul li {
+  border-bottom: 1px solid #ccc;
+  padding: 0 .1rem;
+}
+.mmb_view .mmb_search .mmb_dropDown ul li a {
+  font-size: .16rem;
+  height: .4rem;
+  line-height: .38rem;
+}
+.mmb_view .mmb_search .mmb_dropDown ul li a span {
+  height: 100%;
+  vertical-align: top;
+  font-size: .3rem;
+  color: red;
+  float: right;
+  display: none;
+}
+.mmb_view .mmb_search .mmb_dropDown ul li a span.active {
+  display: block;
+}
+.mmb_view .mmb_goods {
+  padding: .1rem 0;
+}
+.mmb_view .mmb_goods ul {
+  width: 98%;
+  margin: 0 auto;
+}
+.mmb_view .mmb_goods ul li {
+  float: left;
+  width: 50%;
+}
+.mmb_view .mmb_goods ul li a {
+  background-color: #fff;
+  height: 100%;
+  padding: 0 .05rem;
+  margin: .05rem;
+}
+.mmb_view .mmb_goods ul li a .info {
+  font-size: .16rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: .05rem 0;
+}
+.mmb_view .mmb_goods ul li a .price {
+  font-size: .25rem;
+  padding-bottom: .05rem;
+  color: #f8601d;
+}
+.mmb_view .mmb_goods ul li a .price .skiphop {
+  font-size: .16rem;
+  color: #fff;
+  border-radius: .05rem;
+  width: .7rem;
+  float: right;
+  background-color: #ff9501;
+  padding: .05rem .1rem;
+  text-align: center;
+}
+.mmb_view .mmb_loading {
+  text-align: center;
+  font-size: .5rem;
+}

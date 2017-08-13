@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优惠券产品</title>
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/couponList.css">
+</head>
+<body>
+    <div class="view">
+        <!--头部-->
+        <header class="coupon_head clearfix">
+            <div class="back">
+                <a class=" icon-angle-left" id="arrow_left" href="coupon.html"></a>
+            </div>
+            <h1>肯德基优惠券</h1>
+            <div class="head_app">
+                <a href=""><img src="./images/header_app.png" alt=""></a>
+            </div>
+        </header>
+        <div>
+            <div class="coupon_tips">--点餐前出示手机中的优惠券，即可享受优惠--</div>
+        </div>
+        <div class="coupon_list">
+            <div class="cou_list_content">
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="cover" style="display:none">   
+    </div>
+</body>
+
+</html>
+<!--引包-->
+<script src="./lib/zepto/zepto.js"></script>
+<script src="./lib/zepto/touch.js"></script>
+<script src="./lib/zepto/event.js"></script>
+<script src="./lib/zepto/ajax.js"></script>
+<script src="./lib/template-web.js"></script>
+<script src="./js/coupon.js"></script>
+
+<!--定义模板-->
+<script type='text/html' id='template'>
+    {{each result}}
+    <li>
+        <a href="javascript:;">
+            <div class="list_pic">
+                {{@$value.couponProductImg}}
+            </div>
+            <div class="info">
+                <div class="info_content">
+                    <h3>
+                        {{$value.couponProductName}}
+                    </h3>
+                    <div class="price">
+                        <strong>￥ 12</strong>
+                    </div>
+                    <div class="time">{{$value.couponProductTime}}</div>
+                    <div class="arrow_right  icon-angle-right"></div>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>

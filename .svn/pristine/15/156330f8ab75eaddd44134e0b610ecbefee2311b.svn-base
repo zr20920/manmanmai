@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>白菜价--淘宝内部优惠券</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/lowPrice.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+</head>
+
+<body>
+    <!--标题栏  -->
+    <div class="lowPrice_title">
+        <span><a href="./index.html" class="icon-angle-left"></a></span>
+        <p class="top_title">白菜价--淘宝内部券</p>
+        <a href="javascript:;" class="app"><img src="./images/header_app.png" alt=""></a>
+    </div>
+    <!--tab栏  -->
+    <div class="lowPrice_nav">
+        <div id="wrapper">
+            <ul class="nav_container clearfix">
+                <!--填入nav模板 -->
+            </ul>
+        </div>
+    </div>
+    <!--优惠产品  -->
+    <div class="lowPrice_product">
+        <div id="P_wrapper">
+            <ul class="product_container">
+                <!--填入优惠产品模板  -->
+            </ul>
+        </div>
+    </div>
+    <!--底部  -->
+    <div class="lowPrice_bottom">
+        <ul class="bottom_tools">
+            <li><a href="javascript:;">登录</a></li>
+            <li><a href="javascript:;">注册</a></li>
+            <li><a href="javascript:;" class="Top">↑返回顶部</a></li>
+        </ul>
+        <div class="bottom_info">
+            <a href="javascript:;">手机APP下载</a>
+            <span>慢慢买手机版</span>--掌上比价平台 m.manmanbuy.com.
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!--公共lib  -->
+<script src="./lib/jquery-1.8.2.min.js"></script>
+<script src="./lib/template-web.js"></script>
+<script src="./lib/iscroll.js"></script>
+
+<!--nav模板  -->
+<script type="text/html" id="nav_template">
+    {{each result}}
+    <li data-titleId='{{$value.titleId}}'>{{$value.title}}</li>
+    {{/each}}
+</script>
+
+<!--优惠产品模板-->
+<script type="text/html" id="product_template">
+    {{each result}}
+    <li>
+        <div class="product_pic">
+            {{@$value.productImg}}
+        </div>
+        <div class="product_info clearfix">
+            <div class="info_top">
+                <div class="t">
+                    {{@$value.productName}}
+                </div>
+                <div class="pr">
+                    {{@$value.productPrice}}
+                </div>
+            </div>
+            <div class="info_bottom">
+                {{@$value.productCouponRemain}}
+                <div class="b clearfix">
+                    <div class="get">{{@$value.productCoupon}}</div>
+                    <div class="buy">{{@$value.productHref}}</div>
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</script>
+
+<!--白菜价JS  -->
+<script src="./js/lowPrice.js"></script>

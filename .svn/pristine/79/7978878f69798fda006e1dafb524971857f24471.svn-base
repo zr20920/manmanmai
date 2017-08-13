@@ -1,0 +1,189 @@
+/* 品牌列表 */
+
+@import './base.less';
+.view {
+    width: 100%;
+}
+
+
+/* 头部 */
+
+header {
+    width: 100%;
+    height: .5rem;
+    background-color: #ff841d;
+    padding: 0 .14rem;
+    >a {
+        float: left;
+        width: 50%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 50%;
+            margin-top: .125rem;
+        }
+    }
+    >a:last-child {
+        float: right;
+        width: .34rem;
+        height: .68rem;
+        img:last-child {
+            margin-top: .08rem;
+        }
+    }
+}
+
+
+/* 搜索 */
+
+.search {
+    width: 100%;
+    height: .52rem;
+    padding: 0 .4rem 0 .1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ebebeb;
+    >input {
+        width: 100%;
+        height: .3rem;
+        border-radius: .2rem;
+        padding-left: .22rem;
+        background-color: #f1f1f1;
+        font-size: .16rem;
+    }
+    >input:last-child {
+        padding-left: 0;
+        text-align: center;
+        font-size: .16rem;
+        color: #fff;
+        line-height: .3rem;
+        position: absolute;
+        right: 5px;
+        top: .1rem;
+        background-color: #ff841d;
+        width: .64rem;
+        height: .3rem;
+    }
+}
+
+
+/* 导航 */
+
+.nav {
+    height: .4rem;
+    width: 100%;
+    border-bottom: 1px solid #ebebeb;
+    background: linear-gradient(to top, #ececec, #fff);
+    ul {
+        a {
+            display: inline-block;
+        }
+        height: 100%;
+        line-height: .4rem;
+        padding-left: .08rem;
+        li {
+            height: 100%;
+            float: left;
+            font-size: .14rem;
+            color: #5a5a5a;
+        }
+    }
+}
+
+
+/* 评论 */
+
+.brand_comment {
+    width: 100%;
+
+    .title {
+        width: 100%;
+        height: .4rem;
+        font-size: .16rem;
+        color: #874604;
+        padding-left: .08rem;
+        line-height: .4rem;
+        border-bottom: 1px solid #c8c8c8;
+        background-color: #f3f3f3;
+    }
+    >ul {
+        width: 100%;
+        >li {
+            width: 100%;
+            border-bottom: 1px solid #e7e7e7;
+            background-color: #f2f2f2;
+            padding: .12rem;
+            >a {
+                width: 100%;
+                height: 1rem;
+                position: relative;
+                .pic {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: .8rem;
+                    height: .8rem;
+                    background-color: red;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .info {
+                    padding: .02rem 0 0 .9rem;
+                    width: 100%;
+                    height: 1.2rem;
+                    .tit {
+                        font-size: .14rem;
+                        color: #999999;
+                    }
+                }
+            }
+            >div {
+                width: 100%;
+                position: relative;
+                background-color:#f8f8f8;
+                &::before{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top:-.07rem;
+                    left:.3rem;
+                    width: 0;
+                    height: 0;
+                    border-bottom: .08rem solid #f8f8f8;
+                    border-right: .08rem solid transparent;
+                    border-left: .08rem solid transparent;
+                }
+                >a {
+                    width: 100%;
+                    padding: .12rem;
+                    border: 1px solid #e7e7e7;
+                    .info {
+                        margin-bottom:.1rem; 
+                        span {
+                            font-size: .14rem;
+                            height: .2rem;
+                            float: left;
+                        }
+                        span:first-child{
+                            
+                        }
+                        span:nth-child(2){
+                            width: 1rem;
+                            background: url('../images/star.svg') repeat left/.2rem;
+                        }
+                        span:last-child{
+                            float: right;
+                            color:#999999;
+                        }
+                    }
+                    .content {
+                        font-size: .15rem;
+                    }
+                }
+            }
+        }
+    }
+}

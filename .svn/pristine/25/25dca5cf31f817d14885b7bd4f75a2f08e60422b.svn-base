@@ -1,0 +1,58 @@
+@import 'base.css';
+@import 'media.css';
+header {
+  width: 100%;
+  height: .44rem;
+  background-color: #ff841d;
+  padding: 0 .09rem;
+  color: #fff;
+}
+header .font {
+  float: left;
+  width: .5rem;
+  font-size: .4rem;
+  margin-left: .1rem;
+}
+header h1 {
+  float: left;
+  font-size: .2rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: .44rem;
+  margin-left: .75rem;
+}
+header .app {
+  float: right;
+}
+header .app > a img {
+  width: .34rem;
+  height: .34rem;
+  margin-top: .06rem;
+}
+.content {
+  font-size: .12rem;
+}
+.content li {
+  width: 50%;
+  height: 2.5rem;
+  padding: .2rem;
+  float: left;
+  border-right: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+}
+.content li .name {
+  margin-top: .2rem;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.content li .price {
+  color: #ff9547;
+}
+.content li .info {
+  font-size: .12rem;
+  color: #b7b7b7;
+}

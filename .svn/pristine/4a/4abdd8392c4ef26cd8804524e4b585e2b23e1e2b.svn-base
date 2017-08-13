@@ -1,0 +1,184 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  /* 盒子模型的 怪异模式  */
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+}
+/* 嗨淘折扣公共样式 */
+/* 变量声明的颜色 */
+/* 点击a标签去除阴影背景 */
+/* 嗨淘折扣 */
+.ht_view {
+  width: 100%;
+  font-size: .12rem;
+  /* 海淘折扣  头部区域  */
+  /* 海淘折扣  主体部分  */
+  /* 海淘折扣  底部区域  */
+}
+.ht_view header {
+  color: #ffffff;
+  font-size: .2rem;
+  display: flex;
+  height: .44rem;
+  background-color: #ff841d;
+  line-height: .44rem;
+}
+.ht_view header .ht_back {
+  position: absolute;
+  width: .50rem;
+  left: .1rem;
+}
+.ht_view header h1 {
+  margin: auto;
+  font-size: .2rem;
+  perspective: 1;
+}
+.ht_view header .ht_home {
+  position: absolute;
+  width: .50rem;
+  right: .1rem;
+}
+.ht_view main {
+  overflow: hidden;
+  /* 商品列表 */
+  /* 翻页按钮 */
+}
+.ht_view main .ht_product {
+  overflow: hidden;
+}
+.ht_view main .ht_product ul {
+  height: .118rem;
+}
+.ht_view main .ht_product ul li {
+  padding: 14px 8px;
+  position: relative;
+  border-bottom: 1px solid #efefef;
+}
+.ht_view main .ht_product ul li .ht_pic {
+  width: 40%;
+  height: 100%;
+  display: inline-block;
+  padding-right: .1rem;
+}
+.ht_view main .ht_product ul li .ht_info {
+  width: 60%;
+  line-height: .57rem;
+  display: inline-block;
+  float: right;
+}
+.ht_view main .ht_product ul li .ht_info .ht_title {
+  color: #333333;
+  word-break: break-all;
+  font-size: .15rem;
+  line-height: .19rem;
+  min-height: .57rem;
+  text-align: left;
+  font-weight: normal;
+  padding-top: .12rem;
+}
+.ht_view main .ht_product ul li .ht_info .ht_title > span {
+  color: #ff993f;
+}
+.ht_view main .ht_product ul li .ht_info .ht_other {
+  color: #c4b4ba;
+  padding-top: .2rem;
+}
+.ht_view main .ht_product ul li .ht_info .ht_other span:nth-child(1) {
+  float: left;
+  bottom: 10rem;
+}
+.ht_view main .ht_product ul li .ht_info .ht_other span:nth-child(2) {
+  float: right;
+}
+.ht_view main .ht_dispage {
+  padding: .2rem .1rem;
+}
+.ht_view main .ht_dispage table {
+  height: .32rem;
+  width: 100%;
+}
+.ht_view main .ht_dispage table body {
+  width: 100%;
+}
+.ht_view main .ht_dispage table body tr {
+  position: relative;
+  width: 100%;
+}
+.ht_view main .ht_dispage table body tr td {
+  width: 33.33%;
+  position: absolute;
+  height: .32rem;
+}
+.ht_view main .ht_dispage table body tr td:nth-child(2) {
+  text-align: center;
+}
+.ht_view main .ht_dispage table body tr td:last-child {
+  right: 0;
+}
+.ht_view footer {
+  background-color: #efefef;
+}
+.ht_view footer .f_up {
+  height: .32rem;
+  border-top: .01rem solid #cdcdcd;
+  border-bottom: .01rem solid #cdcdcd;
+}
+.ht_view footer .f_up a {
+  height: .32rem;
+  width: 30%;
+  float: left;
+  text-align: center;
+  line-height: .32rem;
+  border-right: 1px solid #cdcdcd;
+}
+.ht_view footer .f_up a:last-child {
+  width: 40%;
+  border-right: none;
+}
+.ht_view footer .f_down {
+  padding-top: .2rem;
+  padding-bottom: .1rem;
+}
+.ht_view footer .f_down p:first-child {
+  text-align: center;
+}
+.ht_view footer .f_down p:first-child a {
+  display: inline-block;
+}
+.ht_view footer .f_down p:first-child a:first-child {
+  color: #fc2121;
+}
+.ht_view footer .f_down p + p {
+  background-color: #efefef;
+  text-align: center;
+}

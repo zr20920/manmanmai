@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/Saving.css">
+
+</head>
+
+<body>
+    <div class="view">
+        <!--头部-->
+        <header class='clearfix'>
+            <a class="font icon-angle-left"></a>
+            <h1>
+                省钱控 - 最新优惠
+            </h1>
+            <div class="app">
+                <a href=""><img src="./images/header_app.png" alt=""></a>
+            </div>
+        </header>
+        <!--加载页-->
+        <div class="list"> </div>
+        <!--分页-->
+        <div class="page">
+            
+            <a href="javascript:;" class='pre'>上一页</a>
+            <select name="" id="middle">             
+           </select>
+            <a href="javascript:;" class='next'>下一页</a>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="./lib/zepto/zepto.js"></script>
+<script src="./lib/zepto/ajax.js"></script>
+<script src='./lib/zepto/event.js'></script>
+<script src="./lib/zepto/touch.js"></script>
+<script src="./lib/template-web.js"></script>
+<script type='text/html' id='template'>
+    {{each result}}
+    <div class="item clearfix">
+        <a href="./Savinginfor.html?id={{$value.productId}}">
+            <div class='pic'>               
+            </div>
+            <div class="info clearfix">
+                <div class="title">
+                    {{$value.productName}}
+                    <span>{{$value.productPinkage}}</span>
+                </div>
+                <div class="other clearfix">
+                    <span class="mall">{{$value.productFrom}} |{{$value.productTime}}</span>
+                    <span class="comment">
+                        <i class='icon-comment-alt'></i>
+                        {{$value.productComCount}}
+                             </span>
+                </div>
+            </div>
+
+        </a>
+    </div>
+
+    {{/each}}
+</script>
+
+<script src="./js/Saving.js"></script>
+

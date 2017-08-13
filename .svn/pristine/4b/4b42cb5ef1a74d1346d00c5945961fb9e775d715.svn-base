@@ -1,0 +1,33 @@
+@import 'base.css';
+@import 'media.css';
+.header {
+  height: .4rem;
+  background: #ff841d;
+}
+.content {
+  font-size: .12rem;
+}
+.content li {
+  width: 50%;
+  height: 2.5rem;
+  padding: .2rem;
+  float: left;
+  border-right: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+}
+.content li .name {
+  margin-top: .2rem;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.content li .price {
+  color: #ff9547;
+}
+.content li .info {
+  font-size: .12rem;
+  color: #b7b7b7;
+}

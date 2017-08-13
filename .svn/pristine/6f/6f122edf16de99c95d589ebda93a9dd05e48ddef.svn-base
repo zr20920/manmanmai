@@ -1,0 +1,124 @@
+@import 'base.less';
+.view {
+    width: 100%;
+    height: 100%;
+}
+
+a.disabled{
+    cursor: not-allowed;
+}
+
+header {
+    width: 100%;
+    height: .44rem;
+    background-color: #ff841d;
+    padding: 0 .09rem;
+    color: #fff;
+    .font {
+        float: left;
+        width: .5rem;
+        font-size: .4rem;
+        margin-left: .1rem;
+    }
+    h1 {
+        float: left;
+        font-size: .2rem;
+        font-weight: bold;
+        text-align: center;
+        line-height: .44rem;
+        margin-left: .3rem;
+    }
+    .app {
+        float: right;
+        >a {
+            img {
+                width: .34rem;
+                height: .34rem;
+                margin-top: .06rem;
+            }
+        }
+    }
+}
+
+.list {
+    width: 100%;
+    padding: .14rem .08rem 0rem .08rem;
+    .item {
+        height: 1.15rem;
+        .pic {
+            float: left;
+            width: 1.1rem;
+            img {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+        .info {
+            padding-left: .9rem;
+            font-size: .14rem;
+            .title {
+                font-size: .15rem;
+                span {
+                    color: #ff6c00;
+                }
+            }
+            .other {
+                margin-top: .2rem;
+                color: #a1a1a1;
+                font-size: .12rem;
+                span:last-child {
+                    float: right;
+                }
+            }
+        }
+    }
+}
+
+
+
+.page {
+    height: .9rem;
+    width: 100%;
+    background-color: #f2f2f2;
+    position: relative;
+    padding: .2rem .2rem;
+    position: relative;
+    text-align: center;
+    a {
+        width: .83rem;
+        height: .35rem;
+        border-radius: 5px;
+        background-color: #e2e2e2;
+        font-size: .14rem;
+        text-align: center;
+        line-height:.35rem;
+        border: 1px solid #ccc;
+    }
+
+    .pre{
+       position: absolute;
+       top: .3rem;
+    }
+    #middle{
+        width:.95rem;
+        height: .35rem;
+        position: absolute;
+        top:.3rem;
+        left: 1.4rem;
+        text-align: center;
+        font-size: .14rem;
+        
+    }
+     .next{
+       position: absolute;
+       right: .2rem;
+       top: .3rem;
+    }
+   
+}
+
+
+
+
+
+

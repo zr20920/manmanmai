@@ -1,0 +1,210 @@
+@import "base.less";
+/* 嗨淘折扣公共样式 */
+/* 变量声明的颜色 */
+@head_color:#ff841d;
+@headFont_color:#ffead8;
+@mainFont2_color:#c4b4ba; 
+@mainFont1_color:#ff993f;
+@footer_color:#efefef;
+@footerBorder:#cdcdcd;
+
+html,body,.ht_view{
+    // height: 100%;
+}
+
+// @keyframes autoScroll{
+//     from{}
+//     to{}
+// }
+
+/* 点击a标签去除阴影背景 */
+a{
+    // -webkit-tap-highlight-color: transparent;  
+}
+/* 嗨淘折扣 */
+.ht_view{
+    // transition: 
+    width: 100%;
+    font-size: .12rem;
+    // overflow: hidden;
+    /* 海淘折扣  头部区域  */
+    header{
+        // position: fixed;
+        // top:0;
+        color: #ffffff;
+        font-size: .2rem;
+        display: flex;
+        height: .44rem;
+        background-color: @head_color;
+        // padding: .14rem;
+        line-height: .44rem;
+
+        .ht_back{
+            position: absolute;
+            width: .50rem;
+            // height: 100%;
+            left: .1rem;
+
+        }
+        h1{
+            margin: auto;
+            font-size: .2rem;
+            perspective: 1;
+        }
+        .ht_home{
+            position: absolute;
+            width: .50rem;
+            // height: 100%;
+            right: .1rem;
+        }
+
+    }
+    /* 海淘折扣  主体部分  */
+    main{
+        // height: 100%;
+        overflow: hidden;
+        /* 商品列表 */
+        .ht_product{
+            // height: 100%;
+            overflow: hidden;
+            ul{
+                // height:100%;
+                height: .118rem;
+                li{
+                        
+                        padding: 14px 8px;
+                        position: relative;
+                        border-bottom: 1px solid #efefef;
+                    .ht_pic{
+                        width: 40%;
+                        height: 100%;
+                        display: inline-block;
+                       padding-right: .1rem; 
+                    }
+                    .ht_info{
+                        width: 60%;
+                        // height: 100%;
+                        line-height: .57rem;
+                        display: inline-block;
+                        float:right;
+                        .ht_title{
+                            color: #333333;
+                            word-break: break-all;
+                            font-size: .15rem;
+                            line-height: .19rem;
+                            min-height: .57rem;
+                            text-align: left;
+                            font-weight: normal;
+                            padding-top:.12rem;
+                            >span{
+                                color: @mainFont1_color;
+                            }
+                        }
+                        .ht_other{
+                            color: @mainFont2_color;
+                            padding-top: .2rem;
+                           
+                            span:nth-child(1){
+                            float:left;
+                            bottom:10rem;
+                            }
+                            span:nth-child(2){
+                             float:right;
+                            // bottom:10rem;
+                            }
+                            
+                        }
+                    }
+                }
+                
+            }
+        }
+        /* 翻页按钮 */
+        .ht_dispage{
+            padding: .2rem .1rem;
+            // background-color: @footer_color;
+            table{
+                 height: .32rem;
+                 width: 100%;
+                body{
+                   
+                    width: 100%;
+                    tr{
+                        position: relative;
+                        width: 100%;
+                       td{
+                            width: 33.33%;
+                            position: absolute;
+                            height: .32rem;
+                            // text-align: center;
+                       } 
+
+                        td:first-child{
+                            
+                            // background-color: red;
+                            
+                            >a{
+                                // height: .32rem; 
+                                // display:block;
+                                // padding: .1rem 0;
+                                // background-color: red;    
+                            }
+                        }
+                        td:nth-child(2){
+                            text-align: center
+                        }
+                        td:last-child{
+                            right: 0;
+                            
+                        }
+                    }
+                   
+                }
+            }
+        }
+    }
+    /* 海淘折扣  底部区域  */
+    footer{
+        background-color: @footer_color;
+        .f_up{
+            height: .32rem;
+            
+            border-top: .01rem solid #cdcdcd;   
+            border-bottom: .01rem solid #cdcdcd;
+            a{
+                // padding:.1rem 0;
+                height: .32rem;
+                width: 30%;
+                float:left;
+                text-align: center;
+                line-height: .32rem;
+                border-right: 1px solid #cdcdcd;
+           
+            }
+            a:last-child{
+                width: 40%;
+                border-right:none;
+            }
+        }
+        .f_down{
+            padding-top: .2rem;
+            padding-bottom:.1rem; 
+          
+            // text-align: center;
+       
+            p:first-child{
+                text-align: center;
+                a{
+                 display: inline-block;
+                } 
+                a:first-child{color: #fc2121}
+                a:last-child{}
+            }
+            p+p{
+                background-color: @footer_color;
+                text-align: center;
+                
+            }   
+        }
+    }
+}
